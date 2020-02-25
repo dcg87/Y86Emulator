@@ -1,13 +1,3 @@
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
-
-#include "y86ins.h"
-#include "y86state.h"
-#include "y86debug.h"
-#include "y86util.h"
-#include "y86codes.h"
-
 /* y86ins.c 
  *
  *
@@ -17,9 +7,7 @@
 /*
  * y86 halt instruction. 
  * sets cpu status to HALT
- **/ 
-
-void
+ **/
 y86_halt(struct State* state)
 { 
   #if DEBUG || DISSASSEMBLER|| DISSASSEMBLER

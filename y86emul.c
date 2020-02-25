@@ -15,14 +15,14 @@
  * Two compile flags here:
  * EXE
  *    enabled: executes the loaded program (e.g. prog1.y86)
- *    disabled: loads prog1.y86 into memory 
+ *    disabled: loads prog1.y86 into memory (but does not execute it)
  *
  * DEBUG 
  *    enabled: prints helpful info during execution, dumps final state to .txt
- *    disabled: do not print state info (will only print output if, say, prog1.y86 
+ *    disabled: do not print state info (will only print output if, e.g., prog1.y86 
  *    contains a 'print' instruction)
  * 
- * Refer to the makefile 
+ * Refer to makefile 
  * */
 
 int
@@ -50,7 +50,6 @@ main (int argc, char* argv[])
 
    #if DEBUG
   debug_printState(state);
-  /* dump memory */
   debug_dumpMemory(state);
    #endif 
 

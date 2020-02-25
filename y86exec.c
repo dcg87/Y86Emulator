@@ -42,7 +42,7 @@ execute(struct State* state)
   state->status = STATUS_AOK;
 do{
     state->step++;
-    int ins = state->ADDRESS_SPACE[state->IP]; 
+    register int ins = state->ADDRESS_SPACE[state->IP]; 
    
   /* Decode the instruction that was fetched from memory. */  
   switch(ins)

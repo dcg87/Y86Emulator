@@ -22,10 +22,10 @@ shrink(char*);
 void
 strip(char*);
 /*TTO_byte()
- * paramters: char a, char b,
+ * parameters: char a, char b,
  * results: merges a,b into char c, returns c
  *
-  Two-to-one byte. 
+  Two-to-one byte
   Merges two bytes into one byte, assuming that each
   each has no hi-bits.
   Created to solve the issue of "00" in the source file
@@ -41,12 +41,7 @@ strip(char*);
 */
 char
 TTO_byte(char, char);
-/*
-  converts a character to an integer
-  e.g.)
-      '0' -> 0
-      'F' -> F
-*/
+
 
 /*
  * char_to_int()
@@ -71,6 +66,7 @@ char_to_int(char);
   within range r: a <= r < b 
   
 */
+
 /*
 void
 reverse(char*);
@@ -82,7 +78,7 @@ void
 statusCodeToStr(int,char*);
 
 void
-show_bytes(char* start, int len);
+show_bytes(char* start, size_t len);
 void
 show_int(int x);
 #endif

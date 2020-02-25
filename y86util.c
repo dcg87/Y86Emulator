@@ -53,10 +53,9 @@ char_to_int(char ch)
 void
 strip(char* str)
 {
-  int len = strlen(str);
+  size_t len = strlen(str);
   
-  int k = 1;
-  for (;k < len;k++)
+  for (size_t k = 1;k < len;k++)
   {
     str[k-1] = str[k];
   }
@@ -67,7 +66,7 @@ strip(char* str)
 void
 shrink(char* str)
 {
-  int len = strlen((char*)str);
+  size_t len = strlen((char*)str);
   str = realloc(str,len*sizeof(char));  
 }
   /* 
@@ -118,11 +117,10 @@ statusCodeToStr(int status, char* output)
   }
 }
 void 
-show_bytes(char* start, int len)
+show_bytes(char* start, size_t len)
 {
 
- int i;
- for (i = 0; i < len; i++)
+ for (size_t i = 0; i < len; i++)
  printf(" %.2x", start[i]);
 printf("\n");
 
